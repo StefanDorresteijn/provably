@@ -1,0 +1,18 @@
+html
+  head
+    title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
+    script(src="https://use.fontawesome.com/223defc90c.js")
+    script(src='/components/jquery/dist/jquery.min.js')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+  body(class=customClass)
+    include partials/_navbar
+    .container.container-main
+        block content
+
+    script(src='/components/bootstrap/dist/js/bootstrap.min.js')
