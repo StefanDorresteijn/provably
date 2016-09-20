@@ -1,0 +1,49 @@
+//
+   Created by Stefan on 9/16/2016.
+
+extends ../layout
+
+block content
+    img(src="/images/onetouch.png").center-block.img-responsive.onetouchlogo
+    form.form-horizontal
+        .form-group
+            label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='pf_test_initial_hash') SHA
+            .col-sm-7.col-xs-10
+                input#pf_test_initial_hash.form-control(type='text', name='pf_test_initial_hash', value='468ddddca643e26f5745ec7c0c7da32070c817934d3b8b3e6401a3dac2637ea2')
+            #result_SHA.icon.col-sm-2.col-xs-2.icon
+        .form-group
+            label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='pf_test_initial_shuffle') Initial Data
+            .col-sm-7.col-xs-10
+                input#pf_test_initial_shuffle.form-control(type='text', name='pf_test_initial_shuffle', value='Qs,6c,6c,8c,5s,Kd,Jh,6h,Ah,10c,3d,Kd,As,Qs,6s,3h,Qc,3c,Jh,5d,10h,4d,Kc,8c,4d,4h,10s,Js,Js,4c,8h,2c,2h,7c,9c,5c,7d,Jh,Jd,8s,Kd,9d,Qd,8h,6c,Jc,4d,Qc,3h,3s,5d,5d,10c,3d,Jc,6d,5d,Kc,9h,7d,Kh,Qc,9s,2s,7c,9d,Kd,9s,3h,Js,Ks,2h,Jc,Jc,4d,8s,8s,Jc,6h,Jd,10h,9d,As,10s,Kh,Kd,5s,2c,Js,4s,4h,Kh,Qd,5d,7c,2s,6s,Jc,Qd,9d,10h,6s,8d,4d,Ad,4d,5c,6s,8d,3h,3c,3s,3c,Ad,2h,7s,Ac,9c,7h,9c,Qh,4d,Jd,8d,8c,4d,Kh,As,4s,Qs,2h,10s,Kc,Jh,10h,10c,Ac,6d,Ah,6d,10c,5d,2s,6s,7s,8h,3s,10d,2s,6c,3h,Kd,7s,9d,7c,10d,10h,3s,10s,4h,9h,2c,5h,Kh,Jd,3d,5s,4c,As,Kc,4c,Jh,Jh,2s,7h,Qh,Kh,Ac,2d,10s,7c,8s,9d,6h,5s,4c,6d,7s,4h,5c,4h,As,Qd,4s,Ks,9d,5s,8h,6d,8h,5h,7h,Kc,9c,8s,Jc,Ks,8c,2c,Kc,10s,9c,2d,Ah,9s,Qc,9h,4c,3s,5h,4s,6h,3c,10d,8s,4s,5d,4c,Jd,Js,Ks,Qs,5c,7h,Ah,Ks,Qs,9c,7h,Qd,5s,8d,7s,7s,Qd,8s,Jd,Qd,8c,6h,10c,3d,6h,3s,10s,Ks,3d,7c,7s,10c,9c,2d,7c,5c,Qs,4h,Jd,Qh,4c,3d,6s,4s,10d,2d,Kd,2h,7h,9h,3s,5h,7d,8h,10d,Ac,Qs,8d,3h,8c,6d,7h,8d,6c,8s,Kh,Kd,Qc,2h,4c,7d,9s,2c,Ah,5h,6c,9s,4h,10d,7d,Qh,3d,5c,Qc,10h,2h,Js,5h,9h,3c,Kc,3s,2c,Ad,7d,Ah,3c,9h,5c,2d,Ad,Qc,9s,6h,10c,7h,9d,Jc,6c,2s,7d,2s,3d,4s,9h,Ad,8h,Ad,Qh,5s,10c,8c,5h,Qh,9h,10h,Kc,Qc,9c,3h,10d,Qh,6s,Js,Kh,Ac,6c,Qh,Ad,3h,9s,8c,Qs,2d,5h,As,Js,As,Ks,Ac,2d,Qd,Ac,Ac,4h,Ks,Jd,3c,5d,Ah,2c,4s,8d,8h,7d,9s,8d,3c,Jh,2c,As,6d,Ah,Ad,2h,5s,6s,6d,10d,6h,2s,7s,10s,5c,Jh,7c,10h,2d')
+            #result_InitData.icon.col-sm-2.col-xs-2
+        .form-group
+            label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='pf_test_server_seed') Dealer Seed
+            .col-sm-7.col-xs-10
+                input#pf_test_server_seed.form-control(type='text', name='pf_test_server_seed', value='5dbd4121-e078-4140-9557-')
+            #result_DealerSeed.icon.col-sm-2.col-xs-2
+        .form-group
+            label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='pf_test_client_seed') Player Seed
+            .col-sm-7.col-xs-10
+                input#pf_test_client_seed.form-control(type='text', name='pf_test_client_seed', value='eFd435LmnlzUaUZrD52WBTkg')
+            #result_PlayerSeed.icon.col-sm-2.col-xs-2
+        .form-group
+            label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='pf_test_final_shuffle') Final Data
+            .col-sm-7.col-xs-10
+                input#pf_test_final_shuffle.form-control(type='text', name='pf_test_final_shuffle', value='7s,Js,Jh,6h,3c,8s,10c,Ad,9s,Kc,Jd,9h,Ks,As,2h,10h,Jd,4s,10h,4d,6s,8c,10c,10h,5h,Kh,10d,Jh,8d,4s,4c,5s,3s,Jc,6s,8d,3c,Ks,Kd,9h,Kh,5s,Qs,Jd,8h,3c,2h,3h,3s,3s,Jd,9h,As,6h,Ac,9c,8c,Qc,4h,9s,8s,2c,Qs,3s,2c,5s,8h,4s,Jd,Ac,Jh,Js,Jh,Ah,7s,Kh,3d,Kc,Qc,7c,4c,8h,Ad,9c,2c,10d,5h,Jc,2h,10d,8d,6s,4h,2s,Kd,6c,6h,5d,Jc,8h,2d,Qh,5d,6h,Kc,Qs,Qd,3d,7c,10h,Jd,5c,9c,9s,5c,3c,7d,8d,6h,10h,10c,Kc,9d,Ad,Kh,3h,5s,2d,8d,9h,Jh,Ad,6h,8c,5h,8h,6d,8s,2s,7s,Ad,8s,6d,Jc,8s,5s,6c,10s,10s,Kc,Js,Qc,6d,Kd,10c,8c,3c,3s,5s,5d,7s,6c,6s,Js,Qc,2d,7h,5h,10h,Ad,Ks,Ks,Js,4s,2c,2s,Ac,6c,Jd,4d,2h,2d,Ah,7d,10d,Jh,3h,6c,Ah,3s,10d,4c,7d,10c,10s,4c,9d,As,5c,Kh,6s,7d,9h,7c,4h,As,2c,10d,4d,6s,7s,5c,5c,5h,Qd,3c,Qh,7h,9d,9c,4c,Qh,Ah,10h,Ah,9h,6h,8s,Qs,3d,4s,3h,10s,8c,9s,9c,Qc,7h,9h,8h,6s,2h,Ks,2s,Qd,2h,Qs,9d,2s,9s,7d,Qh,5d,9s,7c,Kc,9d,10c,8h,Js,4d,2h,7s,7h,6s,2d,4s,4s,Jd,Qd,10s,7c,As,6c,Ac,7c,Qh,Jc,8s,4h,9c,Ac,10c,Qc,Js,9d,Ks,Ad,5h,Ac,7d,8h,3d,8c,5s,Qc,7h,Ac,As,10c,2c,3c,9c,4d,Qh,8d,2c,5d,Qd,7d,4h,2d,4s,2c,Js,7h,Jc,4c,10s,Kh,9d,4d,4c,5s,6d,2d,3d,Qd,Ah,Kc,Qc,2h,5h,5h,8s,5d,6d,6c,3h,10s,6d,9s,7c,3c,9h,Ks,6d,Ah,7s,Kd,3h,3h,7d,10d,9d,Qs,4h,Kh,8c,Jh,Ad,4d,6c,5d,10h,10d,Kd,2s,2d,4d,5c,7h,9s,2s,Ah,Jh,Qs,5d,3s,4c,3h,As,6h,Qh,Kc,3d,6d,9c,Kh,7h,7c,Qd,Kd,8d,As,Kd,5c,4h,2s,5c,Ac,3d,10s,3s,Qh,7s,Ks,Qs,Jc,Kd,3d,8d,Jc,Qd,4h,8c')
+            #result_FinalData.icon.col-sm-2.col-xs-2
+        .form-group
+            .col-sm-7.col-xs-10.col-sm-offset-3.col-xs-offset-2
+                button.btn.btn-success.btnVerify
+                    | Verify
+
+    script(src='/javascripts/onetouch/crypto-js/core.js')
+    script(src='/javascripts/onetouch/crypto-js/sha256.js')
+    script(src='/javascripts/onetouch/mersenne-twister.js')
+    script(src='/javascripts/onetouch/fisher-yates-shuffle.js')
+    script(src='/javascripts/onetouch/mersenne-twister.js')
+    script(src='/javascripts/onetouch/provably-fair.js')
+    script(src='/javascripts/onetouch/browserDetector.js')
+    script(src='/javascripts/onetouch.js')
+
+    script.
+        Init();
