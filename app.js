@@ -6,10 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var pages = require('./controllers/pages_controller');
-var verifiers = require('./controllers/verifiers_controller');
-
 var app = express();
+require('./routes')(app);
 
 // connect to the database
 mongoose.connect('mongodb://localhost/test');
@@ -30,9 +28,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', pages);
-app.use('/verifiers/', verifiers);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
