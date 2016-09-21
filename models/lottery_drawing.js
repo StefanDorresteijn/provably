@@ -1,3 +1,4 @@
+var Chance = require('chance');
 var LotteryDrawingSchema = new Schema({
     endTime: [Date],
     maxEntries: [Number],
@@ -7,22 +8,19 @@ var LotteryDrawingSchema = new Schema({
         type: Schema.types.ObjectId,
         ref: LotteryEntry
     }],
-    winners: [],
-    state: [String]
+    winners: [{
+        type: Schema.types.ObjectId,
+        ref: LotteryEntry
+    }],
+    state: {type: String, default: "started"}
 });
 
 LotteryDrawingSchema.methods.calculateWinners = function(block) {
-    calculatedWinners = [];
-    while(calculatedWinners.length < this.amountOfWinners)
-    {
-        var amountofChars = calculatedWinners.length + 7;
-        var blockHex = block.slice(-Math.abs(amountofChars));
-        var blockInt = parseInt(blockHex, 16);
-        var modulus = blockInt % (entries.length - 1);
-        if(calculatedWinners.indexOf(modulus) == 0)
-            calculatedWinners.push(modulus);
-    }
-
+    var chance = new Chance(block);
+    var self = this;
+    chance.unique(chance.integer, this.amountOfWinners, {min: 0, max: this.entries.length-1}).forEach(function(chanceValue) {
+       self.winners.push(self.entries[chanceValue]);
+    });
 };
 
 LotteryDrawingSchema.statics.states = function() {
