@@ -9,6 +9,8 @@ var mongoose = require('mongoose');
 var app = express();
 require('./routes')(app);
 
+var socketListener = require('./socket/listener')(app);
+
 // connect to the database
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;

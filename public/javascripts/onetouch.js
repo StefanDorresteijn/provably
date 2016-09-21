@@ -22,42 +22,57 @@ function Run() {
 
     var result = provablyFair.verifyBlackjack(clientSeed, initialHash, serverSeed, initialShuffle, finalShuffle);
 
+    var resultSuccess = true;
 
 
     if(result.SHA==true){
-        document.getElementById("result_SHA").innerHTML = "<i class='glyphicon glyphicon-ok icon-success'></i>" ;
+        document.getElementById("result_SHA").innerHTML = "<i class='fa fa-check icon-success'></i>" ;
 
     }else{
-        document.getElementById("result_SHA").innerHTML = "<i class='glyphicon glyphicon-remove icon-failure'></i>" ;
+        resultSuccess = false;
+        document.getElementById("result_SHA").innerHTML = "<i class='fa fa-times icon-failure'></i>" ;
 
     }
     if(result.initData==true){
-        document.getElementById("result_InitData").innerHTML = "<i class='glyphicon glyphicon-ok icon-success'></i>" ;
+        document.getElementById("result_InitData").innerHTML = "<i class='fa fa-check icon-success'></i>" ;
 
     }else{
-        document.getElementById("result_InitData").innerHTML = "<i class='glyphicon glyphicon-remove icon-failure'></i>" ;
+        resultSuccess = false;
+        document.getElementById("result_InitData").innerHTML = "<i class='fa fa-times icon-failure'></i>" ;
 
     }
     if(result.dealerSeed==true){
-        document.getElementById("result_DealerSeed").innerHTML = "<i class='glyphicon glyphicon-ok icon-success'></i>" ;
+        document.getElementById("result_DealerSeed").innerHTML = "<i class='fa fa-check icon-success'></i>" ;
 
     }else{
-        document.getElementById("result_DealerSeed").innerHTML = "<i class='glyphicon glyphicon-remove icon-failure'></i>" ;
+        resultSuccess = false;
+        document.getElementById("result_DealerSeed").innerHTML = "<i class='fa fa-times icon-failure'></i>" ;
 
     }
     if(result.playerSeed==true){
-        document.getElementById("result_PlayerSeed").innerHTML = "<i class='glyphicon glyphicon-ok icon-success'></i>" ;
+        document.getElementById("result_PlayerSeed").innerHTML = "<i class='fa fa-check icon-success'></i>" ;
 
     }else{
-        document.getElementById("result_PlayerSeed").innerHTML = "<i class='glyphicon glyphicon-remove icon-failure'></i>" ;
+        resultSuccess = false;
+        document.getElementById("result_PlayerSeed").innerHTML = "<i class='fa fa-times icon-failure'></i>" ;
 
     }
     if(result.finalData==true){
-        document.getElementById("result_FinalData").innerHTML = "<i class='glyphicon glyphicon-ok icon-success'></i>" ;
+        document.getElementById("result_FinalData").innerHTML = "<i class='fa fa-check icon-success'></i>" ;
 
     }else{
-        document.getElementById("result_FinalData").innerHTML = "<i class='glyphicon glyphicon-remove icon-failure'></i>" ;
+        resultSuccess = false;
+        document.getElementById("result_FinalData").innerHTML = "<i class='fa fa-times icon-failure'></i>" ;
 
+    }
+
+    if(resultSuccess == true)
+    {
+        $(".verifier-alert").html("<div class=\"alert alert-success\" role=\"alert\">Verification passed!</div>")
+    }
+    else
+    {
+        $(".verifier-alert").html("<div class=\"alert alert-danger\" role=\"alert\">Verification failed!</div>")
     }
 
 }

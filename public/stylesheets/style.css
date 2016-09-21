@@ -5,12 +5,12 @@ body
 }
 
 
-.container-main
+.container-main:first-of-type
 {
     margin-top:51px;
 }
 
-.onetouch
+.onetouch-verifier
 {
     background: #0067A9;
     background-image:url('/images/onetouchbg.jpg');
@@ -26,4 +26,24 @@ body
 .btnVerify
 {
     width: 100%;
+}
+
+.verify-form
+{
+    margin-bottom:30px;
+}
+
+.icon-verifier
+{
+    margin-top:10px;
+}
+
+.icon-success
+{
+    color: lawngreen;
+}
+
+.icon-failure
+{
+    color: red;
 }

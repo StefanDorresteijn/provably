@@ -12,7 +12,9 @@ html
     meta(name='author', content='')
   body(class=customClass)
     include partials/_navbar
+    .container-main
+      block verifier
     .container.container-main
-        block content
+      block content
 
     script(src='/components/bootstrap/dist/js/bootstrap.min.js')
