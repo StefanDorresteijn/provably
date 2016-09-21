@@ -16,10 +16,11 @@ LotteryDrawingSchema.methods.calculateWinners = function(block) {
     while(calculatedWinners.length < this.amountOfWinners)
     {
         var amountofChars = calculatedWinners.length + 7;
-        var blockHex = block.slice(-Math.abs(amountofChars), amountofChars);
+        var blockHex = block.slice(-Math.abs(amountofChars));
         var blockInt = parseInt(blockHex, 16);
         var modulus = blockInt % (entries.length - 1);
-        calculatedWinners.push(modulus);
+        if(calculatedWinners.indexOf(modulus) == 0)
+            calculatedWinners.push(modulus);
     }
 
 };
