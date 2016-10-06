@@ -1,0 +1,25 @@
+//Created by Stefan on 9/28/2016.
+
+extends ../layout
+
+block content
+    h1
+        = drawing.name
+        small.lottery-state &nbsp;(#{drawing.state})
+    if drawing.state == "finished" || drawing.state == "closed"
+        p
+            | Ended on&nbsp;
+            span.strftime(data-strftime=drawing.endTime)
+    else
+        p
+            | Ending on &nbsp;
+            span.strftime(data-strftime=drawing.endTime)
+
+    if drawing.state == "finished"
+        h3
+            | Winners
+            small &nbsp;(#{drawing.winners.length})
+        ul.list-group
+            each winner in drawing.winners
+                li.list-group-item= winner
+    #entry_list(data-id=drawing._id)

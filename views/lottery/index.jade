@@ -1,0 +1,34 @@
+//Created by Stefan on 9/28/2016.
+
+extends ../layout
+
+block content
+    h1 Lottery Tool
+    p Lottery tools are really dope
+    .row
+        .col-md-9
+            h3 Our lottery system
+            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            form(action="/api/v1/lottery_tool/" method="post" id="lottery_form")
+                .form-group
+                        label(for="lottery_tool_name") Lottery Name
+                        input.form-control(type="text" id="lottery_tool_name" name="name")
+                .form-group
+                    label(for="lottery_tool_email") Email
+                    input.form-control(type="email" id="lottery_tool_email" name="email")
+                .form-group
+                    label(for="lottery_tool_secret_key") Secret Key
+                    input.form-control(type="text" id="lottery_tool_secret_key" name="secret_key")
+                .form-group
+                    label(for="lottery_tool_max_entries") Maxmimum entries
+                    input.form-control(type="number" id="lottery_tool_max_entries" name="max_entries")
+                .form-group
+                    label(for="lottery_tool_amount_of_winners") Amount of Winners
+                    input.form-control(type="number" id="lottery_tool_amount_of_winners" name="amount_of_winners")
+                .form-group
+                    label(for="lottery_tool_end_date") End Date
+                    input.form-control.datetimepicker(type="text" id="lottery_tool_end_date" name="end_time")
+                button.btn.btn-default(type="submit") Save Lottery
+        .col-md-3
+            h3 Latest draws
+            #app

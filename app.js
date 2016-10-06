@@ -6,10 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+var LotteryDrawing = require("./models/lottery_drawing");
+var LotteryEntry = require("./models/lottery_entry");
+
 var app = express();
-require('./routes')(app);
 
 var socketListener = require('./socket/listener')(app);
+var cronRunner = require('./cron/close_drawings')();
 
 // connect to the database
 mongoose.connect('mongodb://localhost/test');
@@ -30,6 +33,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+require('./routes')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
