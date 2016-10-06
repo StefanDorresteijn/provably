@@ -10,16 +10,18 @@ export default class EntryList extends React.Component {
             ticket_id: '',
             secret_key: '',
             email: ''
-        }
+        };
         this.addEntry = this.addEntry.bind(this);
     }
 
     componentWillMount() {
         console.log(this.props.drawing_id);
         console.log("Component Will Mount");
-        this.serverRequest = $.get("/api/v1/lottery_tool/57ee6bd74fbe391702b31594", function(result) {
+        this.serverRequest = $.get("/api/v1/lottery_tool/"+ this.props.drawing_id.replace(/['"]+/g, ''), function(result) {
+            console.log(result);
             this.setState({
-                entries: result.entries
+                entries: result.entries,
+                timestamp: Date.now()
             });
         }.bind(this));
     }
@@ -28,14 +30,13 @@ export default class EntryList extends React.Component {
         e.preventDefault();
         var self = this;
         $.ajax({
-            url: "/api/v1/lottery_tool/"+ self.props.drawing_id +"/add_entry",
+            url: "/api/v1/lottery_tool/"+ self.props.drawing_id.replace(/['"]+/g, '') +"/add_entry",
             dataType: 'json',
             type: 'POST',
-            data: {ticket_id: this.state.ticket_id, secret_key: this.state.secret_key, email: this.state.email},
+            data: {ticket_id: self.state.ticket_id, secret_key: self.state.secret_key, email: self.state.email},
             cache: false,
             success: function(data) {
-                this.setState({entries: this.state.entries.concat(data)});
-                console.log("Data received");
+                this.setState({entries: self.state.entries.concat(data), timestamp: Date.now()});
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(status, err.toString());
@@ -63,7 +64,7 @@ export default class EntryList extends React.Component {
                     <form action="" method="post" onSubmit={this.addEntry}>
                         <div className="form-group">
                             <label htmlFor="ticket_id">Ticket ID</label>
-                            <input id="ticket_id" type="text" name="ticket_id" className="form-control" onChange={ (e) => this.setState({ ticket_id: e.target.value }) } />
+                            <input id="ticket_id" type="text" key={this.state.timestamp} name="ticket_id" className="form-control" onChange={ (e) => this.setState({ ticket_id: e.target.value }) } />
                         </div>
                         <div className="form-group">
                             <label htmlFor="secret_key">Secret Key</label>

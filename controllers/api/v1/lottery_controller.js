@@ -46,7 +46,7 @@ router.post('/:id/add_entry', function(req, res, next) {
             if(err) console.log(err);
             drawing.entries.push(entry);
             drawing.save(function(err, draw) {
-                res.send(draw);
+                res.send(entry);
             })
         });
     });
