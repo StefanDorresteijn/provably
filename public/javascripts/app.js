@@ -20,5 +20,6 @@ $(function () {
             }
         });
     });
-    $(".strftime")[0].innerHTML = strftime('%B %d, %Y', $(this).data('strftime'));
+
+
 });

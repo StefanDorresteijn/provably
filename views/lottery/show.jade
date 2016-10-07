@@ -12,7 +12,8 @@ block content
             span.strftime(data-strftime=drawing.endTime)
     else
         p
-            | Ending on &nbsp;
+            | Ending on&nbsp;
+            = strftime('%B %d, %Y', drawing.endTime)
             span.strftime(data-strftime=drawing.endTime)
 
     if drawing.state == "finished"

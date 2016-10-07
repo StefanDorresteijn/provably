@@ -15,10 +15,7 @@ export default class EntryList extends React.Component {
     }
 
     componentWillMount() {
-        console.log(this.props.drawing_id);
-        console.log("Component Will Mount");
         this.serverRequest = $.get("/api/v1/lottery_tool/"+ this.props.drawing_id.replace(/['"]+/g, ''), function(result) {
-            console.log(result);
             this.setState({
                 entries: result.entries,
                 timestamp: Date.now()
