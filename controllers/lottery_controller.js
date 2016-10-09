@@ -6,7 +6,7 @@ var LotteryEntry = require('../models/lottery_entry');
 
 router.get('/', function(req, res, next) {
     LotteryDrawing.getLotteries(req.query.page, req.query.limit, req.query.sortBy, req.query.dir, req.query.state, function(drawings) {
-        res.render('lottery/index', {title: "Last Draws", drawings: drawings});
+        res.render('lottery/index', {title: "Lottery Tool", drawings: drawings});
     });
 });
 

@@ -2,14 +2,16 @@ extends ../layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p
+    | Welcome to ProvFair, an&nbsp;
+    a(href="https://github.com/StefanDorresteijn/provably") open source
+    | &nbsp;lottery verifier and system.
 
   .row
       .col-md-9
           h3 Main Content
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non sodales libero. Praesent tempus vulputate mi eu pulvinar. Vivamus aliquam elit eu mi vestibulum, sed consequat diam ultrices. Vestibulum nec sagittis nibh. Pellentesque dignissim pretium blandit. Nunc justo erat, condimentum vel eros at, condimentum rutrum eros. Maecenas accumsan ac turpis quis viverra. Donec turpis ante, facilisis ac auctor vitae, viverra nec risus. Praesent varius efficitur eros, vel ullamcorper turpis ullamcorper in. Sed facilisis tellus ac felis volutpat, nec congue lectus pretium.
-          p Proin non erat non tortor bibendum imperdiet sed nec mi. Donec id fringilla mi. Vestibulum et mollis turpis. Fusce tristique et risus nec varius. Aliquam erat volutpat. Pellentesque at finibus diam. Maecenas auctor nunc eu luctus ultricies.
-          p Praesent suscipit purus mi, eget tempor nulla vestibulum ac. Aenean fermentum quis libero vel hendrerit. Sed in nisi eu eros vehicula facilisis. Suspendisse purus magna, tempor at sem eu, viverra ultrices libero. Nunc congue aliquet sagittis. Vestibulum euismod, augue eu fringilla ullamcorper, est justo tincidunt justo, sed condimentum nulla sem ac magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum varius pellentesque nulla, eu rutrum nunc viverra ac. Etiam tempor lacinia fringilla. Praesent pretium vulputate metus, sed ullamcorper nulla pulvinar in. Aenean dapibus, felis at sodales lacinia, elit justo ullamcorper ligula, ac commodo nisi mauris eu magna. Nullam faucibus libero ac nisi aliquet fermentum. Vestibulum ut dolor pharetra, imperdiet velit sit amet, feugiat erat.
+          p ProvFair.com is the only open source provably fair verifier and lottery system. By using our lottery system, you can show your users that your lotteries are completely provably fair.
+          p Our verifiers are provided by the sites we're verifying, using their systems and explanations. All of these verifiers are completely open source and can be found on our Github repository.
       .col-md-3
           h3 Latest finished lotteries
           #app
