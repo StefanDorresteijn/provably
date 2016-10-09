@@ -37,6 +37,20 @@ LotteryDrawingSchema.methods.calculateWinners = function(block) {
     this.save();
 };
 
+LotteryDrawingSchema.methods.safeJSON = function() {
+    return {
+        _id: this._id,
+        name: this.name,
+        endTime: this.endTime,
+        maxEntries: this.maxEntries,
+        amountOfWinners: this.amountOfWinners,
+        entries: this.entries,
+        winners: this.winners,
+        state: this.state,
+        block: this.block
+    }
+};
+
 LotteryDrawingSchema.methods.addEntry = function(entry) {
     if(this.entries.length < this.maxEntries)
         this.entries.push(entry);
@@ -55,7 +69,7 @@ LotteryDrawingSchema.statics.getLotteries = function(page, limit, sortBy, direct
 
     var sortByAndDirection = direction + sortBy;
 
-    LotteryDrawing.find({state: state}).sort(sortByAndDirection).skip(start).limit(limit).exec(function(err, docs) {
+    LotteryDrawing.find({state: state}, {email: 0, secretKey: 0}).sort(sortByAndDirection).skip(start).limit(limit).exec(function(err, docs) {
        if(!err) {
            return callback(docs);
        } else {

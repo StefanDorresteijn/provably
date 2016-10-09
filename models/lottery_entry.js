@@ -9,6 +9,13 @@ var LotteryEntrySchema = new mongoose.Schema({
     ticketId: String
 });
 
+LotteryEntrySchema.methods.safeJSON = function() {
+    return {
+        _id: this._id,
+        ticketId: this.ticketId
+    }
+};
+
 
 var LotteryEntry = mongoose.model('LotteryEntry', LotteryEntrySchema);
 
