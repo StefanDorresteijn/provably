@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94263508-efc8-4143-8f7d-a3bea0a28cfc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/v1/lottery_controller.js" afterPath="$PROJECT_DIR$/controllers/api/v1/lottery_controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/lottery_drawing.js" afterPath="$PROJECT_DIR$/models/lottery_drawing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/lottery_entry.js" afterPath="$PROJECT_DIR$/models/lottery_entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/lottery_controller.js" afterPath="$PROJECT_DIR$/controllers/lottery_controller.js" />
     </list>
     <ignored path="provably.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,103 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/lottery/show.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entry_list.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/components/entry_list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-934">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_navbar.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/partials/_navbar.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lottery_controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/api/v1/lottery_controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lottery_entry.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/lottery_entry.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lottery_drawing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/lottery_drawing.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="71" column="63" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="lottery_controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/lottery_controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="429">
+              <caret line="13" column="88" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/index.js">
+      <file leaf-file-name="lottery_controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/api/v1/lottery_controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1221">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+            <state relative-caret-position="627">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -189,13 +105,13 @@
         <option value="$PROJECT_DIR$/public/javascripts/app.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/controllers/lottery_controller.js" />
         <option value="$PROJECT_DIR$/react/components/entry_list.js" />
         <option value="$PROJECT_DIR$/views/partials/_navbar.jade" />
         <option value="$PROJECT_DIR$/views/lottery/show.jade" />
         <option value="$PROJECT_DIR$/models/lottery_drawing.js" />
         <option value="$PROJECT_DIR$/models/lottery_entry.js" />
         <option value="$PROJECT_DIR$/controllers/api/v1/lottery_controller.js" />
+        <option value="$PROJECT_DIR$/controllers/lottery_controller.js" />
       </list>
     </option>
   </component>
@@ -583,12 +499,12 @@
       <workItem from="1475232582624" duration="17445000" />
       <workItem from="1475490505287" duration="4380000" />
       <workItem from="1475785448930" duration="12091000" />
-      <workItem from="1476014231518" duration="653000" />
+      <workItem from="1476014231518" duration="1173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138649000" />
+    <option name="totallyTimeSpent" value="139169000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -852,6 +768,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -866,22 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/lottery_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,6 +837,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/lottery_entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/lottery_drawing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
@@ -942,18 +853,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/v1/lottery_controller.js">
+    <entry file="file://$PROJECT_DIR$/react/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+        <state relative-caret-position="782">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/lottery_entry.js">
+    <entry file="file://$PROJECT_DIR$/controllers/lottery_controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <caret line="13" column="88" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/v1/lottery_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding />
         </state>
       </provider>

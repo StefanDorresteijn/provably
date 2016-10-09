@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) {
-    LotteryDrawing.findOne({_id: req.params.id}).populate('entries').exec(function(err, drawing) {
+    LotteryDrawing.findOne({_id: req.params.id}).populate('entries').populate('winners').exec(function(err, drawing) {
         var strftime = require('../public/components/strftime/strftime');
         res.render('lottery/show', {title: drawing.name, drawing: drawing, strftime: strftime});
         //res.send(drawing);
