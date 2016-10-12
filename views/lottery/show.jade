@@ -6,15 +6,16 @@ block content
     h1
         = drawing.name
         small.lottery-state &nbsp;(#{drawing.state})
-    if drawing.state == "finished" || drawing.state == "closed"
+    if drawing.state == "finished"
         p
             | Ended on&nbsp;
-            span.strftime(data-strftime=drawing.endTime)
+            = strftime('%B %d, %Y', drawing.endTime)
+    else if drawing.state == "closed"
+        p Calculating winner(s)
     else
         p
             | Ending on&nbsp;
             = strftime('%B %d, %Y', drawing.endTime)
-            span.strftime(data-strftime=drawing.endTime)
 
     if drawing.state == "finished"
         h3

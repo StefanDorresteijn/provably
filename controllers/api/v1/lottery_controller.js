@@ -20,8 +20,8 @@ router.post('/', function(req, res, next) {
         console.log("Saved Lottery Drawing!");
     });
 
-    console.log(lotteryDrawing);
-    res.send(lotteryDrawing);
+    console.log(lotteryDrawing.safeJSON());
+    res.send(lotteryDrawing.safeJSON());
 });
 
 router.get('/', function(req, res, next) {
@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
     LotteryDrawing.findOne({_id: req.params.id}).populate('entries').populate('winners').exec(function(err, drawing) {
-        res.send(drawing);
+        res.send(drawing.safeJSON());
     });
 });
 
@@ -46,7 +46,7 @@ router.post('/:id/add_entry', function(req, res, next) {
             if(err) console.log(err);
             drawing.entries.push(entry);
             drawing.save(function(err, draw) {
-                res.send(entry);
+                res.send(entry.safeJSON());
             })
         });
     });
