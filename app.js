@@ -5,6 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+try
+{
+  require('./dev_env.js');
+}
+catch (err) {
+  console.log(err);
+}
+
 
 var LotteryDrawing = require("./models/lottery_drawing");
 var LotteryEntry = require("./models/lottery_entry");
@@ -15,7 +23,7 @@ var socketListener = require('./socket/listener')(app);
 var cronRunner = require('./cron/close_drawings')();
 
 // connect to the database
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect(process.env.DBURI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
