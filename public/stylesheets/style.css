@@ -18,6 +18,14 @@ body
     color: #fff;
 }
 
+.betterbets-verifier
+{
+    background: #0067A9;
+    background-image:url('/images/betterbetsbg.jpg');
+    background-repeat:no-repeat;
+    color: #fff;
+}
+
 .onetouchlogo
 {
     margin: 30px 0;
@@ -46,4 +54,9 @@ body
 .icon-failure
 {
     color: red;
+}
+
+#site_alias
+{
+    display:none;
 }

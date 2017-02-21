@@ -23,7 +23,7 @@ var socketListener = require('./socket/listener')(app);
 var cronRunner = require('./cron/close_drawings')();
 
 // connect to the database
-mongoose.connect(process.env.DBURI);
+mongoose.connect(process.env.DBURI || "127.0.0.1:27017");
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
