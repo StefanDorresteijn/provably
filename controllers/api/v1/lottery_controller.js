@@ -3,6 +3,8 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var LotteryDrawing = mongoose.model('LotteryDrawing');
 var LotteryEntry = mongoose.model('LotteryEntry');
+const {ObjectID} = require('mongodb'); // or ObjectID 
+
 
 /* GET Lottery Explanation Page */
 router.post('/', function(req, res, next) {
@@ -37,7 +39,8 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.post('/:id/add_entry', function(req, res, next) {
-    LotteryDrawing.findOne({_id: req.params.id, email: req.body.email, secretKey: req.body.secret_key}, function(err, drawing) {
+    console.log(new ObjectID(req.params.id))
+    LotteryDrawing.findOne({_id: new ObjectID(req.params.id), email: req.body.email, secretKey: req.body.secret_key}, function(err, drawing) {
         if(err) return err;
         if(drawing === null) return res.send({error: "Could not find lottery"});
         if(drawing.state != 'started') return res.send({error: 'This draw is closed or finished'});

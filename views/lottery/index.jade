@@ -3,34 +3,20 @@
 extends ../layout
 
 block content
-    h1 Lottery Tool
-    p
-        | This is our own provably fair lottery tool. You can use this tool to create your own lotteries and show they're provably fair by linking to our&nbsp;
-        a(href="https://github.com/StefanDorresteijn/provably") source code
-    .row
-        .col-md-9
-            h3 Our lottery system
-            p To create a lottery on our site, simply fill in a name, the maximum entries, the amount of winners your lottery will have and when your lottery will end. You'll also need to fill in a secret email address and secret key which you'll use to add entries to your lottery.
-            form(action="/api/v1/lottery_tool/" method="post" id="lottery_form")
-                .form-group
-                        label(for="lottery_tool_name") Lottery Name
-                        input.form-control(type="text" id="lottery_tool_name" name="name")
-                .form-group
-                    label(for="lottery_tool_email") Email
-                    input.form-control(type="email" id="lottery_tool_email" name="email")
-                .form-group
-                    label(for="lottery_tool_secret_key") Secret Key
-                    input.form-control(type="text" id="lottery_tool_secret_key" name="secret_key")
-                .form-group
-                    label(for="lottery_tool_max_entries") Maxmimum entries
-                    input.form-control(type="number" id="lottery_tool_max_entries" name="max_entries")
-                .form-group
-                    label(for="lottery_tool_amount_of_winners") Amount of Winners
-                    input.form-control(type="number" id="lottery_tool_amount_of_winners" name="amount_of_winners")
-                .form-group
-                    label(for="lottery_tool_end_date") End Date
-                    input.form-control.datetimepicker(type="text" id="lottery_tool_end_date" name="end_time")
-                button.btn.btn-default(type="submit") Save Lottery
-        .col-md-3
-            h3 Latest draws
-            #app
+    p.site-content This is our own provably fair lottery tool. You can use this tool to create your own lotteries and show they're provably fair by linking to our source code.
+    h2 Our lottery system
+    p.site-content To create a lottery on our site, simply fill in a name, the maximum entries, the amount of winners your lottery will have and when your lottery will end. You'll also need to fill in a secret email address and secret key which you'll use to add entries to your lottery.
+    form(action="/api/v1/lottery_tool/" method="post" id="lottery_form")
+        .form-group
+                input.form-control(type="text" id="lottery_tool_name" name="name" placeholder="Lottery Name")
+        .form-group
+            input.form-control(type="email" id="lottery_tool_email" name="email" placeholder="Email")
+        .form-group
+            input.form-control(type="text" id="lottery_tool_secret_key" name="secret_key" placeholder="Secret Key")
+        .form-group
+            input.form-control(type="number" id="lottery_tool_max_entries" name="max_entries" placeholder="Max Entries")
+        .form-group
+            input.form-control(type="number" id="lottery_tool_amount_of_winners" name="amount_of_winners" placeholder="# of winners")
+        .form-group
+            input.form-control.datetimepicker(type="text" id="lottery_tool_end_date" name="end_time" placeholder="End Date")
+        button.btn.btn-primary.savelottery(type="submit") Save Lottery

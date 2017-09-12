@@ -5,6 +5,7 @@ html
     link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css')
     link(rel='stylesheet', href='/components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
     script(src="https://use.fontawesome.com/223defc90c.js")
     script(src='/components/jquery/dist/jquery.min.js')
     meta(charset='utf-8')
@@ -13,11 +14,12 @@ html
     meta(name='description', content='')
     meta(name='author', content='')
   body(class=customClass)
-    include partials/_navbar
+    include partials/_header
     .container-main
       block verifier
-    .container.container-main
+    .container.container-main.content-container
       block content
+    include partials/_footer
 
     script(src='/javascripts/components/vendors.js')
     script(src='/javascripts/components/bundle.js')

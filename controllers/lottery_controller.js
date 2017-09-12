@@ -12,8 +12,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
     LotteryDrawing.findOne({_id: req.params.id}).populate('entries').populate('winners').exec(function(err, drawing) {
-        var strftime = require('../public/components/strftime/strftime');
-        res.render('lottery/show', {title: drawing.name, drawing: drawing, strftime: strftime});
+        LotteryDrawing.getLotteries(req.query.page, req.query.limit, req.query.sortBy, req.query.dir, req.query.state, function(drawings) {
+            var strftime = require('../public/components/strftime/strftime');
+            res.render('lottery/show', {title: drawing.name, drawing: drawing, strftime: strftime, drawings: drawings});
+        });
         //res.send(drawing);
     });
 });

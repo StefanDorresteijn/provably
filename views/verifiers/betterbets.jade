@@ -9,39 +9,33 @@ block verifier
             img(src="/images/betterbets.png").center-block.img-responsive.onetouchlogo
             form.form-horizontal.verify-form#verifier
                 .form-group
-                    .verifier-alert.col-sm-offset-3.col-sm-7.col-xs-10#verifier_message
-                    .col-sm-offset-3.col-sm-7.col-xs-10#verifier_rolls
-                    .col-sm-offset-3.col-sm-7.col-xs-10#verifier_result
+                    .verifier-alert.col-sm-6.col-xs-12.col-sm-offset-3#verifier_message
+                    .col-sm-6.col-xs-12.col-sm-offset-3#verifier_rolls
+                    .col-sm-6.col-xs-12.col-sm-offset-3#verifier_result
                 .form-group
-                    label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='server_seed_hash') Server Seed
-                    .col-sm-7.col-xs-10
-                        input#server_seed_hash.form-control(type='text', name='ssh')
+                    .col-sm-6.col-xs-12.col-sm-offset-3
+                        input#server_seed_hash.form-control(type='text', name='ssh', placeholder='Server Seed')
                     #result_SHA.icon-verifier.col-sm-2.col-xs-2.icon-verifier
                 .form-group
-                    label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='server_salt') Server Salt
-                    .col-sm-7.col-xs-10
-                        input#server_salt.form-control(type='text', name='ss')
+                    .col-sm-6.col-xs-12.col-sm-offset-3
+                        input#server_salt.form-control(type='text', name='ss', placeholder='Server Salt')
                     #result_InitData.icon-verifier.col-sm-2.col-xs-2
                 .form-group
-                    label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='server_roll') Server Secret
-                    .col-sm-7.col-xs-10
-                        input#server_roll.form-control(type='text', name='sr')
+                    .col-sm-6.col-xs-12.col-sm-offset-3
+                        input#server_roll.form-control(type='text', name='sr', placeholder='Server Secret')
                     #result_DealerSeed.icon-verifier.col-sm-2.col-xs-2
                 .form-group
-                    label.has-feedback.control-label.col-sm-3.col-xs-12.text-left(for='client_roll') Client Seed
-                    .col-sm-7.col-xs-10
-                        input#client_roll.form-control(type='text', name='cr')
+                    .col-sm-6.col-xs-12.col-sm-offset-3
+                        input#client_roll.form-control(type='text', name='cr', placeholder='Client Seed')
                     #result_PlayerSeed.icon-verifier.col-sm-2.col-xs-2
                 .form-group
-                    .col-sm-7.col-xs-10.col-sm-offset-3
+                    .col-sm-6.col-xs-12.col-sm-offset-3
                         button.btn.btn-success.btnVerify
                             | Verify
 
 block content
-    h2
-        | Betterbets.io Verifier
-        small  (text from Betterbets.io)
-    p All our games will be provably fair through the hashcode engine provided by Moneypot.com. For our users this means the result of bet taken can be verified to have been predetermined without us having the possibility to manipulate the bet result. Gamble at BetterBets.io in the confidence that you will be treated fairly.
+    h3 More about BetterBets
+    p.site-content All our games will be provably fair through the hashcode engine provided by Moneypot.com. For our users this means the result of bet taken can be verified to have been predetermined without us having the possibility to manipulate the bet result. Gamble at BetterBets.io in the confidence that you will be treated fairly.
 
     script(src='/javascripts/query-string.js')
     script(src='/javascripts/betterbets.js')

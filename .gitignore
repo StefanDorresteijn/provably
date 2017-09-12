@@ -39,3 +39,4 @@ jspm_packages
 dev_env.js
 # Hide Webstorm's settings folder
 .idea
+.DS_STORE

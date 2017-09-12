@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    mongoose.model('LotteryDrawing').find({}).sort({endTime: -1}).limit(5).exec(function(err, _drawings)
+    mongoose.model('LotteryDrawing').find({}).sort({endTime: -1}).exec(function(err, _drawings)
     {
         if(err) console.log(err);
         //res.send(_drawings);
